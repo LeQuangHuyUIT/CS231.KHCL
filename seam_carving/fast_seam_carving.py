@@ -131,7 +131,9 @@ img = cv2.imread('cat.jpeg')
 r, c, _ = img.shape 
 
 cv2.imshow('img', img)
+# 
 cv2.waitKey(0)
+
 
 cropped_img = crop_col(img, 0.8)
 cv2.imshow('cropped_img', cropped_img)
