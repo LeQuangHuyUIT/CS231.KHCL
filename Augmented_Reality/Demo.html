@@ -1,0 +1,34 @@
+<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+
+<body style='margin : 0px; overflow: hidden;'>
+	<a-scene embedded arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;'>
+		 
+		<a-marker perset='custom' type='pattern' url= 'https://raw.githubusercontent.com/LeQuangHuyUIT/CS231.KHCL/master/Aruco_pattern/pattern-index.patt'>
+		
+			<!-- Adding an OBJ file to an AR Project-->
+				<a-entity 
+						obj-model="obj: url(https://raw.githubusercontent.com/LeQuangHuyUIT/CS231.KHCL/master/Augmented_Reality/models/low-poly-fox-by-pixelmannen.obj); 
+						mtl: url(https://raw.githubusercontent.com/LeQuangHuyUIT/CS231.KHCL/master/Augmented_Reality/models/low-poly-fox-by-pixelmannen.mtl)"
+			
+						scale= "0.01 0.01 0.01"
+				> 
+				</a-entity>
+		</a-marker>
+			
+
+		<a-marker preset='hiro' >
+		
+			<!-- Adding an OBJ file to an AR Project-->
+				<a-entity 
+						obj-model="obj: url(https://raw.githubusercontent.com/LeQuangHuyUIT/CS231.KHCL/master/Augmented_Reality/models/alduin-dragon.obj); 
+						mtl: url(https://raw.githubusercontent.com/LeQuangHuyUIT/CS231.KHCL/master/Augmented_Reality/models/alduin-dragon.mtl)"
+			
+						scale= "0.001 0.001 0.001"
+				> 
+				</a-entity>
+		</a-marker>
+
+		<a-entity camera></a-entity>
+	</a-scene>
+</body>
